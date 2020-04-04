@@ -36,11 +36,21 @@
 				{
 					if ($idBloknot == $bloknot['id_bloknot'])
 					{
-						echo '<a class="zametka active" href="index.php?id='. $bloknot['id_bloknot'].'">'. $bloknot['bloknot_name'] .' </a>';
+						echo '
+							<div class="zametka-div">
+								<a class="zametka active" href="index.php?id='. $bloknot['id_bloknot'].'">'. $bloknot['bloknot_name'] .'</a>
+								<a href="php/delete_bloknot.php?id='.$bloknot['id_bloknot'].'" class="delete delete-bloknot"> </a>
+							</div>	
+							';
 					}
 					else
 					{
-						echo '<a class="zametka" href="index.php?id='. $bloknot['id_bloknot'].'">'. $bloknot['bloknot_name'] .' </a>';
+						echo '
+						<div class="zametka-div">
+							<a class="zametka" href="index.php?id='. $bloknot['id_bloknot'].'">'. $bloknot['bloknot_name'] .'</a>
+							<a href="php/delete_bloknot.php?id='.$bloknot['id_bloknot'].'" class="delete delete-bloknot"> </a>
+						</div>	
+						';
 					}
 					
 				}

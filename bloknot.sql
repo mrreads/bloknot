@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 02 2020 г., 00:49
+-- Время создания: Апр 04 2020 г., 16:34
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.3.9
 
@@ -59,15 +59,15 @@ CREATE TABLE `zapiski` (
 --
 
 INSERT INTO `zapiski` (`id_zapis`, `text_zapis`, `id_bloknot`) VALUES
-(1, 'записка 1 первому блокнотуу', 1),
+(1, 'записка 1 первому блокнотуу!', 1),
 (2, 'и еще одна записка к первому блокноту!', 1),
 (3, 'иииии еще одна', 1),
 (4, 'записка ко второму блокноту', 2),
 (5, 'очередная записка ко второму блокноту', 2),
 (6, 'и что же это? конечно же записка ко 2 блокноту!', 2),
-(7, 'записка к третьему блокноту\r\n', 3),
 (8, 'еще одна записка к третьему блокноту', 3),
-(9, 'и еще одна записка к третьему блокноту', 3);
+(9, 'и еще одна записка к третьему блокноту!!!', 3),
+(23, 'записка к третьему блокнотику!!!', 3);
 
 --
 -- Индексы сохранённых таблиц
@@ -94,13 +94,13 @@ ALTER TABLE `zapiski`
 -- AUTO_INCREMENT для таблицы `bloknoti`
 --
 ALTER TABLE `bloknoti`
-  MODIFY `id_bloknot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_bloknot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT для таблицы `zapiski`
 --
 ALTER TABLE `zapiski`
-  MODIFY `id_zapis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_zapis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -110,7 +110,7 @@ ALTER TABLE `zapiski`
 -- Ограничения внешнего ключа таблицы `zapiski`
 --
 ALTER TABLE `zapiski`
-  ADD CONSTRAINT `zapiski_ibfk_1` FOREIGN KEY (`id_bloknot`) REFERENCES `bloknoti` (`id_bloknot`);
+  ADD CONSTRAINT `zapiski_ibfk_1` FOREIGN KEY (`id_bloknot`) REFERENCES `bloknoti` (`id_bloknot`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
