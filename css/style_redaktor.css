@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body{
     height: 100%;
     background-color: #001013;
     font-family: 'Montserrat', sans-serif;
@@ -32,7 +32,6 @@ html, body {
     background-color: aliceblue;
     padding: 0 15px;
     /* border-radius: 3px; */
-    margin-left: 10px;
     letter-spacing: 3px;
     font-size: 19pt;
 }
@@ -58,8 +57,6 @@ html, body {
     letter-spacing: 3px;
     font-weight: 600;
     color: #001013a3;
-    font-size: larger;
-    transition: all 0.3s ease-in-out;
 }
 
 .back:hover {
@@ -74,7 +71,6 @@ img {
     padding: 3px;
     /* border-radius: 3px; */
     width: 45px;
-    margin-left: 10px;
 }
 
 
@@ -122,7 +118,6 @@ img {
     color: #001013a3;
     transition: .3s;
     margin-right: 15px;
-    cursor: pointer;
 }
 
 .save:hover {
@@ -133,17 +128,16 @@ img {
 }
 
 .delete {
-	background-image: url('../picture/icons8-мусор-64.png');
+	background-image: url(../picture/icons8-мусор-64.png);
     height: 60px;
     min-width: 60px;
     background-size: cover;
     border: none;
     background-color: #9acd3200;
-    cursor: pointer;
 }
 
 .delete:hover {
-    background-image: url('../picture/icons8-мусор-2.png');
+    background-image: url(../picture/icons8-мусор-2.png);
     border: 5px solid white;
     /*box-shadow: 0 15px 20px rgba(36, 162, 156, 0.4);
     transform: translateY(-7px);*/
@@ -165,7 +159,8 @@ form {
     flex-flow: column;
 }
 
-form div {
+form div
+{
     display: flex;
     justify-content: center;
     align-items: center;

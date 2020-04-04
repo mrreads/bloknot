@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body{
     height: 100%;
     background-color: #001013;
     font-family: 'Montserrat', sans-serif;
@@ -31,8 +31,6 @@ html, body {
     text-align: center;
     background-color: aliceblue;
     padding: 0 15px;
-    /* border-radius: 3px; */
-    margin-left: 10px;
     letter-spacing: 3px;
     font-size: 19pt;
 }
@@ -58,8 +56,6 @@ html, body {
     letter-spacing: 3px;
     font-weight: 600;
     color: #001013a3;
-    font-size: larger;
-    transition: all 0.3s ease-in-out;
 }
 
 .back:hover {
@@ -74,7 +70,6 @@ img {
     padding: 3px;
     /* border-radius: 3px; */
     width: 45px;
-    margin-left: 10px;
 }
 
 
@@ -99,7 +94,7 @@ img {
 }
 
 .right {
-    background-image: url('../picture/fon.png');
+    background-image: url(../picture/fon.png);
     width: 75%;
     min-height: 800px;
 }
@@ -112,7 +107,6 @@ select {
     font-size: x-large;
     border-radius: 3px;
     padding: 10px;
-    cursor: pointer;
 }
 
 .text {
@@ -145,7 +139,6 @@ select {
     color: #001013a3;
     transition: .3s;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 .submit:hover {

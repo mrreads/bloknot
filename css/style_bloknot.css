@@ -35,18 +35,14 @@ body {
     text-align: center;
     background-color: aliceblue;
     padding: 0 15px;
-    /* border-radius: 3px; */
-    margin-left: 10px;
     letter-spacing: 3px;
     font-size: 19pt;
 }
 
 .name {
-	width: 100%;
+	min-width: 25%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .back {
@@ -57,13 +53,11 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 0px 20px;
+    padding: 0px 50px;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 600;
     color: #001013a3;
-    font-size: larger;
-    transition: all 0.3s ease-in-out;
 }
 
 .back:hover {
@@ -78,7 +72,6 @@ img {
     padding: 3px;
     /* border-radius: 3px; */
     width: 45px;
-    margin-left: 10px;
 }
 
 /*нижняя часть сайта*/
@@ -109,7 +102,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 46px;
+    font-size: 40px;
     padding-right: 25px;
 }
 
@@ -120,21 +113,29 @@ img {
 }
 
 .zametka {
+    text-decoration: none;
+    width: 100%;
+    display: block;
     border: 1px solid #4ECDC4;
     color: #5dc3c3;
     text-align: center;
     margin: 15px 0;
     padding: 15px 10px;
     position: relative;
-    padding-left: 50px;
+}
+
+.zametka.active {
+    background-color: #4ECDC4;
+    color: 0 15px 20px rgba(36, 162, 156, 0.4);
 }
 
 .delete {
-    background-image: url('../picture/icons8-мусор-64.png');
-    min-height: 40px;
+    background-image: url(../picture/icons8-мусор-64.png);
+    max-height: 40px;
     height: 100%;
     width: 40px;
-    background-size: 60%;
+
+    background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -143,17 +144,25 @@ img {
     cursor: pointer;
     opacity: 0.3;
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    right: 0;
     transition: 0.3s all;
 }
 
-.delete:hover {
+.edit
+{
+    background-size: 60%;
+    background-image: url(../picture/pencil_4076.png);
+    left: 0;
+}
+
+.delete:hover
+{
     opacity: 1;
 }
 
 .right {
-    background-image: url('../picture/fon.png');
+    background-image: url(../picture/fon.png);
     width: 100%;
     padding: 4%;
     overflow-y: auto;
@@ -182,7 +191,8 @@ img {
     color: #5dc3c3a8;
     font-size: x-large;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    position: relative;
+    padding-bottom: 55px;
 }
 
 #myDIV {
@@ -191,11 +201,18 @@ img {
     justify-content: center;
 }
 
+#myDIV h2
+{
+    font-size: 36px;
+    color: #5dc3c3;
+    text-transform: uppercase;
+}
 /* Style the active class (and buttons on mouse-over) */
-.active, .btn:hover {
+.active {
     background: #5dc3c3;
     box-shadow: 0 15px 20px rgba(36, 162, 156, 0.4);
     color: #0c1a1dc4;
+    transition: all 0.3s ease-in-out;
 }
 
 
