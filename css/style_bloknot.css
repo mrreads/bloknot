@@ -15,6 +15,28 @@ body {
     overflow: hidden;
 }
 
+.plus{
+    display: flex;
+}
+
+.btn_plus{
+    background-image: url(../picture/icons8-плюс-100.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* margin: 5%; */
+    background-color: #5dc3c3;
+    border-radius: 106px;
+}
+
+.btn_plus:hover{
+    background-image: url(../picture/icons8-плюс-100.png);
+    box-shadow: 0 15px 20px rgba(36, 162, 156, 0.4);
+}
+
 .verh {
     min-height: 5%;
     height: 40px;
@@ -22,7 +44,6 @@ body {
     background-color: #02191d;
     display: flex;
     align-items: center;
-    /* position: fixed; */
 }
 
 .bloknot {
@@ -164,7 +185,7 @@ img {
 .right {
     background-image: url(../picture/fon.png);
     width: 100%;
-    padding: 4%;
+    padding: 0% 4%;
     overflow-y: auto;
     background-size: cover;
 }
@@ -203,6 +224,7 @@ img {
 
 #myDIV h2
 {
+    margin-top: 50px;
     font-size: 36px;
     color: #5dc3c3;
     text-transform: uppercase;

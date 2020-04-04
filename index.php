@@ -15,7 +15,7 @@
 		<img src="picture/icons8-журнал-100.png" class="icon">
 		<div class="name">
 			<a href="index.php" class="bloknot">БЛОКНОТ</a>
-			<a href="create.php" class="back"> СОЗДАТЬ БЛОКНОТ или ЗАПИСКУ </a>
+			<a href="create.php" class="back"> СОЗДАТЬ БЛОКНОТ</a>
 	    </div>
 	</div>
 
@@ -50,8 +50,21 @@
         	
 		</div>
 
-		<div class="right" id="module"> 
+		<div class="right" id="module">
+			<?php
+				if (isset($idBloknot))
+				{
+					echo '<div class="plus"><a href="create.php?id='.$idBloknot.'" class="btn_plus"> </a></div>';
+				}
+				else
+				{
+					echo `<br>`;
+				}
+			?>
+			
 			<div id="myDIV">
+				
+
 
 			<?php
 				if (isset($idBloknot))

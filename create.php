@@ -1,5 +1,6 @@
 <?php 
 	require('./php/connection.php');
+	$id = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +44,15 @@
 					
 					while ($bloknot = mysqli_fetch_assoc($resultBloknoti))
 					{
-						echo '<option value="'.$bloknot['id_bloknot'].'">'. $bloknot['bloknot_name'] .'</option>';
+						if ($id == $bloknot['id_bloknot'])
+						{
+							echo '<option value="'.$bloknot['id_bloknot'].'" selected>'. $bloknot['bloknot_name'] .'</option>';
+						}
+						else
+						{
+							echo '<option value="'.$bloknot['id_bloknot'].'">'. $bloknot['bloknot_name'] .'</option>';
+						}
+						
 					}
 				?>
 				</select>
